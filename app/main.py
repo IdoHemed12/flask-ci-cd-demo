@@ -14,5 +14,5 @@ def show_config():
     return jsonify(config)
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=config["app"]["port"])
-    # app.run(host=config["app"]["IPAddress"], port=config["app"]["port"])
+    # app.run(host="0.0.0.0", port=config["app"]["port"])
+    app.run(host=config["app"]["IPAddress"], port=config["app"]["port"])
