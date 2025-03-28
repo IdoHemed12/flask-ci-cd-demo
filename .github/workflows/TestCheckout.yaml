@@ -6,7 +6,7 @@ on:
     workflow_dispatch:
 jobs:
     testworkflow:
-    runs-on: QA-self-hosted
+        runs-on: QA-self-hosted
     steps:
         - name: Checkout
           uses: actions/checkout@v2
