@@ -1,4 +1,4 @@
-name: Test workflow of coping the repo into the home directory
+name: SelfHosted-Workflow
 on:
     pull_request:
         branches:
