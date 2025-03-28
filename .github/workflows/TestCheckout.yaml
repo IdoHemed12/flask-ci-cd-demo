@@ -1,0 +1,25 @@
+name: SelfHosted-Workflow
+
+on:
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  testworkflow:
+    runs-on: [QA-self-hosted]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Copy repo to home
+        run: |
+          echo "Copying the repo into the home directory"
+          cp -r $GITHUB_WORKSPACE/* $HOME/
+
+      - name: List files in home
+        run: ls -la
+        shell: bash
