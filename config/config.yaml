@@ -1,0 +1,6 @@
+app:
+  name: My DevOps App
+  env: development
+  port: 5000
+  debug: true
+  IPAddress: 192.168.0.110
